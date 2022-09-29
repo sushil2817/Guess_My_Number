@@ -28,8 +28,15 @@ document.querySelector(".check").addEventListener("click", function () {
       document.querySelector(".highscore").textContent = highscore;
     }
 
-    // When guess is wrong
-  } else if (guess !== secretNumber) {
+    
+  } 
+  // When guess is wrong
+  else if (guess > 40 || guess < 0) {
+    // console.log("Please enter number between 1 to 40");
+    alert("Please enter numbers from 1 to 40");
+  }
+  
+  else if (guess !== secretNumber) {
     if (score > 1) {
       displayMessage(guess > secretNumber ? "📈 Too high!" : "📉 Too low!");
       score--;
