@@ -1,6 +1,6 @@
 "use strict";
-let secretNumber = Math.trunc(Math.random() * 40) + 1;
-let score = 40;
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
+let score = 20;
 let highscore = 0;
 
 const displayMessage = function (message) {
@@ -31,9 +31,9 @@ document.querySelector(".check").addEventListener("click", function () {
     
   } 
   // When guess is wrong
-  else if (guess > 40 || guess < 0) {
+  else if (guess > 20 || guess < 0) {
     // console.log("Please enter number between 1 to 40");
-    alert("Please enter numbers from 1 to 40");
+    alert("Please enter numbers from 1 to 20");
   }
   
   else if (guess !== secretNumber) {
@@ -49,8 +49,8 @@ document.querySelector(".check").addEventListener("click", function () {
 });
 
 document.querySelector(".again").addEventListener("click", function () {
-  score = 40;
-  secretNumber = Math.trunc(Math.random() * 40) + 1;
+  score = 20;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
   document.querySelector(".message").textContent = "Start guessing....";
   document.querySelector(".score").textContent = score;
   document.querySelector(".number").textContent = "?";
